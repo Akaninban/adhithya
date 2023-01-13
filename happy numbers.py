@@ -1,10 +1,10 @@
 def _is_happy_num(n):
-    past = set()
+    a = set()
     while n != 1:
         n = sum(int(i)**2 for i in str(n))
-        if n in past:
+        if n in a:
             return False
-        past.add(n)
+        a.add(n)
     return True
 print(_is_happy_num(7))
 print(_is_happy_num(932))
